@@ -1,30 +1,26 @@
 {
-  "name": "express-mongoose-es6-rest-api",
-  "version": "5.0.0",
-  "description": "A Boilerplate application for building REST APIs using express, mongoose in ES6 with code coverage",
-  "author": "Kunal Kapadia <kunalkapadia12@gmail.com>",
+  "name": "zoi-project",
+  "version": "1.0.0",
   "main": "index.js",
   "private": false,
   "engines": {
     "node": ">=8.10.0",
-    "npm": ">=5.6.0",
-    "yarn": ">=1.5.1"
+    "npm": ">=5.6.0"
   },
   "scripts": {
     "start": "node index.js",
-    "start:debug": "cross-env DEBUG=express-mongoose-es6-rest-api:* yarn start",
-    "lint": "esw *.js server config --color",
-    "lint:watch": "yarn lint -- --watch",
-    "precommit": "yarn lint && yarn test",
-    "test": "cross-env NODE_ENV=test ./node_modules/.bin/mocha --ui bdd --reporter spec --colors server --recursive",
-    "test:watch": "yarn test -- --watch",
-    "test:coverage": "cross-env NODE_ENV=test ./node_modules/.bin/istanbul cover _mocha -- --ui bdd --reporter spec --colors server --recursive",
-    "test:check-coverage": "yarn test:coverage && istanbul check-coverage",
-    "report-coverage": "coveralls < ./coverage/lcov.info"
+    "start:debug": "cross-env DEBUG=zoi-project:* npm run start",
+    "lint": "esw *.js src config --color",
+    "lint:watch": "npm run lint -- --watch",
+    "precommit": "npm run lint && npm run test",
+    "test": "cross-env NODE_ENV=test ./node_modules/.bin/mocha --ui bdd --reporter spec --colors src --recursive",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "cross-env NODE_ENV=test ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- --ui bdd --reporter spec --colors src --recursive",
+    "test:check-coverage": "npm run test:coverage && istanbul check-coverage"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:KunalKapadia/express-mongoose-es6-rest-api.git"
+    "url": "https://github.com/minhdang900/nodejs-structure.git"
   },
   "keywords": [
     "express",
