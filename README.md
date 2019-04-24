@@ -104,7 +104,14 @@ docker run -p 3000:3000 node-structure
 
 
 ## Coding Convetion Styles
-
+```
+# Use single quotes
+Use single quotes, unless you are writing JSON.
+Right:
+  var foo = 'bar';
+Wrong:
+  var foo = "bar";
+```
 ## Contributing
 ## Versioning
 ## Authors
